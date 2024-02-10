@@ -1,0 +1,15 @@
+.hero {
+    background-image: url(../img/heroBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    position: relative;
+
+    @media (max-width: 992px) {
+        background-position: 80%;
+    }
+
+    &__wrapper {
+    }
+}

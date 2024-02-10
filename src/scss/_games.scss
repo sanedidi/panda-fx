@@ -1,0 +1,264 @@
+.games {
+    margin: 100px 0;
+    position: relative;
+    overflow-x: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 400px;
+        left: -200px;
+        background-image: url(./../img/x.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 400px;
+        height: 400px;
+        z-index: -99;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 150px;
+        right: -150px;
+        background-image: url(../img/cone-new.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 400px;
+        height: 400px;
+        z-index: -99;
+    }
+
+    // .games__wrapper
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 1130px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    // .games__title
+
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        font-size: clamp(2.5rem, 1.944rem + 2.78vw, 4.375rem);
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+
+        & span {
+            color: #5de8dc;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        color: white;
+        font-size: clamp(1.125rem, 0.94rem + 0.93vw, 1.75rem);
+        font-family: "Gilroy", sans-serif;
+        line-height: 1.1;
+    }
+
+    &__pag {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        width: 100%;
+        margin-top: 20px;
+
+        @media (max-width:480px) {
+            justify-content: center;
+        }
+
+        a {
+            width: 42px;
+            height: 33px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            background-color: #272C2C;
+            color: #5DE8DC;
+            border-radius: 3px;
+            font-family: 'Gilroy', sans-serif;
+            font-weight: 500;
+            font-size: 24px;
+
+            // svg{
+            //     fill: white;
+            // }
+            &:first-child {
+                background-color: #5DE8DC;
+                color: #031413;
+                text-align: center;
+                font-family: Gilroy;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+            }
+        }
+    }
+
+    &__num {
+        color: #c1c1c1;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 39px;
+        transition: all 0.3s ease-in;
+        cursor: pointer;
+
+        &:hover {
+            color: #5de8dc;
+        }
+    }
+
+    // .games__cards
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        flex-wrap: wrap;
+        justify-content: center;
+        // gap: clamp(1.25rem, 0.324rem + 4.63vw, 4.375rem);
+        gap: 30px;
+        margin: 50px 0;
+        position: relative;
+
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 480px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // .games__card
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        background-color: #161b1b;
+        padding: 30px;
+        border-radius: 30px;
+        width: 100%;
+
+        @media (max-width: 786px) {
+            padding: 15px;
+        }
+    }
+
+    // .games__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    // .games__title
+
+    &__title {
+        margin: 0;
+        color: white;
+        font-size: 44px;
+        font-weight: 400;
+        line-height: 61px;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    // .games__text
+
+    &__card-text {
+        color: #b5b5b5;
+        font-size: 20px;
+        font-family: "Gilroy", sans-serif;
+
+        font-weight: 400;
+        line-height: 25px;
+    }
+
+    // .games__price
+
+    &__price {
+        color: white;
+        font-size: 40px;
+        font-weight: 600;
+        font-family: "Gilroy", sans-serif;
+        line-height: 56px;
+    }
+
+    // .games__btns
+
+    &__btns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        width: 100%;
+        text-align: center;
+        margin-top: 21px;
+
+        @media (max-width: 768px) {
+            // flex-direction: column;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // .games__btn
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: #031413;
+        font-size: clamp(1rem, 0.889rem + 0.56vw, 1.375rem);
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 1.55px;
+        background-color: #5de8dc;
+        padding: 15px 5px;
+        border-radius: 5px;
+
+        &.brown {
+            background-color: #f5ffe6;
+        }
+
+        @media (max-width: 786px) {
+            padding: 15px 15px;
+        }
+    }
+
+    &__next {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: max-content;
+        margin-left: auto;
+
+        color: #5de8dc;
+        font-size: clamp(1.25rem, 1.065rem + 0.93vw, 1.875rem);
+        font-family: "Gilroy", sans-serif;
+        font-weight: 400;
+        line-height: 42px;
+    }
+}

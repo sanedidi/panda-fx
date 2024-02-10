@@ -1,0 +1,42 @@
+// MODAL
+
+.modal {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+
+    // .modal__wrapper
+    &__wrapper {
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        background: #fff;
+        padding: 10px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    // .modal__btn
+    &__btn {
+        cursor: pointer;
+    }
+    // .modal__top
+    &__top {
+    }
+    // .modal__title
+    &__title {
+        font-weight: 500;
+        font-size: 22px;
+    }
+    // .modal__close
+    &__close {
+    }
+    // .modal__content
+    &__content {
+    }
+    // .modal__text
+    &__text {
+    }
+}

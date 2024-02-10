@@ -1,0 +1,32 @@
+.contacts {
+    padding: 100px 0;
+    /* .contacts__wrapper */
+    &__wrapper {
+    }
+    /* .contacts__box */
+    &__box {
+        max-width: 300px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 50px auto;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    /* .contacts__link */
+    &__link {
+        font-size: 40px;
+        color: #000;
+        transition: all .3s;
+
+        &:hover {
+            color: #5de8dc;
+        }
+    }
+}

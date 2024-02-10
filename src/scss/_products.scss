@@ -1,0 +1,184 @@
+.products {
+    background-image: url(../img/cardsBG.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+
+    @media (max-width: 982px) {
+        padding: 50px 0;
+    }
+
+    &::after {
+        content: "";
+        background-image: url(./../img/x.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 843px;
+        left: -103px;
+        height: 210px;
+        width: 217px;
+        z-index: 999;
+
+        @media (max-width: 992px) {
+            background-image: none;
+        }
+    }
+
+    &__wrapper {}
+
+    &__title {
+        text-align: center;
+        color: white;
+        font-size: clamp(3.125rem, 2.755rem + 1.85vw, 4.375rem);
+        font-weight: 500;
+        text-transform: uppercase;
+
+        font-family: "BigNoodleTitling", sans-serif;
+
+        span {
+            color: #5de8dc;
+            font-size: clamp(3.125rem, 2.755rem + 1.85vw, 4.375rem);
+
+            font-weight: 400;
+            text-transform: uppercase;
+            word-wrap: break-word;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        @media (max-width: 992px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+
+        max-width: 330px;
+        width: 100%;
+
+        padding: 28px 21px;
+        height: 390px;
+        background-color: #5DE8DC;
+        position: relative;
+        margin: 150px 0;
+
+        &.card1 {
+            background-image: url(../img/card1BGg.png);
+            background-repeat: no-repeat;
+            background-size: 90%;
+            background-position: left;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                background-image: url(../img/card1-after.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: left 20px;
+                width: 80%;
+                height: 286px;
+                position: absolute;
+            }
+        }
+
+        &.card2 {
+            background-image: url(../img/card2BG.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            background-color: #f35555;
+        }
+
+        &.card3 {
+            background-image: url(../img/Group731.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            background-color: #31a8e9;
+        }
+
+        @media (max-width: 992px) {
+            margin: 30px 0 0;
+        }
+
+
+
+        &::before {
+            content: '';
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+            background-color: #031415;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: -1px;
+            top: -1px;
+        }
+    }
+
+    &__card-title {
+        text-transform: uppercase;
+        margin-bottom: auto;
+        position: relative;
+
+        z-index: 1;
+
+        color: black;
+        font-size: 45px;
+        font-weight: 400;
+        line-height: 45px;
+
+        width: fit-content;
+        text-align: start;
+        margin-right: auto;
+
+        &::after {
+            content: '';
+            height: 2px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.205) 100%);
+        }
+    }
+
+    // .products__btn
+
+    &__btn {
+        background-color: #F5FFE6;
+        padding: 15px 30px;
+        margin-top: auto;
+        width: 100%;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+
+            color: #031413;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: 1.55px;
+        }
+    }
+}
